@@ -35,8 +35,12 @@ def get_api_key() -> str:
         API key string
     """
     # Try Streamlit secrets first (Cloud deployment)
-    if "ANTHROPIC_API_KEY" in st.secrets:
-        return st.secrets["ANTHROPIC_API_KEY"]
+    try:
+        if "ANTHROPIC_API_KEY" in st.secrets:
+            return st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        # Secrets file doesn't exist, fall through to environment variables
+        pass
     
     # Fall back to environment variables (local dev)
     load_dotenv()
