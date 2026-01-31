@@ -1,5 +1,5 @@
 """
-RFP Alignment Assistant - Streamlit Application
+RFP Analyst - Streamlit Application
 
 A web application that helps consulting teams quickly parse RFPs 
 and generate internal alignment materials using AI.
@@ -20,7 +20,7 @@ from prompts.rfp_prompts import get_rfp_analysis_prompt
 
 # Page configuration
 st.set_page_config(
-    page_title="RFP Alignment Assistant",
+    page_title="RFP Analyst",
     page_icon="📄",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -260,7 +260,7 @@ def main():
     """Main application entry point."""
     
     # Header
-    st.title("📄 RFP Alignment Assistant")
+    st.title("📄 RFP Analyst")
     st.markdown("""
     Upload an RFP PDF and get instant AI-powered analysis plus strategic alignment materials.
     Generate a structured analysis report and Excel workbook with next steps and key questions.
@@ -342,7 +342,7 @@ def main():
         
         with st.expander("ℹ️ What does this tool do?"):
             st.markdown("""
-            **RFP Alignment Assistant** helps consulting teams by:
+            **RFP Analyst** helps consulting teams by:
             
             1. **Extracting Key Information:**
                - Client problems and challenges
