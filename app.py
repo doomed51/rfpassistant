@@ -262,7 +262,7 @@ def main():
     # Header
     st.title("📄 RFP Analyst")
     st.markdown("""
-    Upload an RFP PDF and get instant AI-powered analysis plus strategic alignment materials.
+    Upload an RFP PDF and get instant analysis plus strategic alignment materials.
     Generate a structured analysis report and Excel workbook with next steps and key questions.
     """)
     
